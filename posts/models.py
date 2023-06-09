@@ -5,7 +5,7 @@ from users.models import Users
 class Posts(models.Model):
     author = models.ForeignKey(Users, on_delete=models.CASCADE, blank=False)
     description = models.TextField()
-    postPicture = models.ImageField()
+    postPicture = models.ImageField(blank=True)
     createdDate = models.DateField(auto_now_add=True)
     date = models.DateField(blank=False)
 
