@@ -1,17 +1,19 @@
 from rest_framework import serializers
-from .models import Posts, Likes, Participants
+from .models import Posts
 
 class postSerializer(serializers.ModelSerializer):
-    model = Posts
-    class meta():
+    class Meta():
+        model = Posts
         fields = ('__all__')
 
+"""
 class likesSerializer(serializers.ModelSerializer):
-    model = Likes
-    class meta():
+    class Meta():
+        model = Likes
         fields = ('__all__')
 
 class participantsSerializer(serializers.ModelSerializer):
-    model = Participants
-    class meta():
+    class Meta():
+        model = Participants
         fields = ('__all__')
+"""
