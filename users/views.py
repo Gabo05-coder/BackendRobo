@@ -13,3 +13,14 @@ class UserViewSet(viewsets.ModelViewSet):
     queryset = Users.objects.all()
     serializer_class = UserSerializer
 
+class UserValidation(APIView):
+    def post(self, request):
+        data = request.data
+
+        try:
+            queryset = Users.objects.get(username = data['username'], password = data['password'])
+        except Users.DoesNotExist:
+            return Response({'error' : 'The data does not exist in the database'})
+        
+        serializer = UserSerializer(queryset)
+        return Response(serializer.data, status=200)
