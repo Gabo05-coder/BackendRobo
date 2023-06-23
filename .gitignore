@@ -1,8 +1,12 @@
 #files
-**/__pycache__
 
 #directories
 media 
+**/__pycache__
+apiDjango/__pycache__
+users/__pycache__
+posts/__pycache__
+migrations/__pycache__
 
 #environments
 venv
