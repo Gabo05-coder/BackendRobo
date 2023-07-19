@@ -120,4 +120,4 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
 CORS_ALLOW_ORIGINGS = ['http://localhost:5173']
-CORS_ORIGIN_WHITELIST = ['HTTP://localhost:5173']   
+CORS_ORIGIN_WHITELIST = ['http://localhost:5173']   
