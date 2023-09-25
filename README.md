@@ -54,6 +54,8 @@ clonado
   ttp://127.0.0.1:8000/api/dataAC
 
 25/9/23
+carpeta de migracion
+      es la convercion de los codgios a lenguaje sql en migracion de forma alter table siver para que el sistema funciones en diferentes computadores, como una forma automaticamente los archivos para evitar errores.
   creacion de un nueva funcion para mostrar la opciones creadas dentro de los modelos creando un formulario de datos Forms.py
     class DataViewSet(viewsets.ModelViewSet):
     queryset = dataAC.objects.all()
@@ -70,4 +72,3 @@ clonado
 
 
     revisar el archivo 0003_dataac, forms.
-    
