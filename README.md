@@ -47,3 +47,27 @@ DB_HOST: Esta variable almacena la dirección del servidor de la base de datos a
 DB_PORT: Almacena el número de puerto al que se debe conectar la aplicación para interactuar con la base de datos. En este caso, el puerto es 3306, que es el puerto estándar utilizado por MySQL. (al parecer)
 
 MYSQL_ATTR_SSL_CA: Esta variable almacena la ubicación del archivo de certificado SSL que se utilizará para establecer una conexión segura a la base de datos. El valor es "/etc/ssl/certs/ca-certificates.crt", lo que indica la ubicación del archivo de certificado en el sistema.
+
+
+clonado 
+  python manage.py runserver
+  ttp://127.0.0.1:8000/api/dataAC
+
+25/9/23
+  creacion de un nueva funcion para mostrar la opciones creadas dentro de los modelos creando un formulario de datos Forms.py
+    class DataViewSet(viewsets.ModelViewSet):
+    queryset = dataAC.objects.all()
+    serializer_class = DataSerializer  cracion de una clase para vista de los datos en DataAC
+      MODE_CHOICES = (
+        ('Auto', 'Auto'),
+        ('Manual', 'Manual'),
+    )
+
+    STATUS_CHOICES = (
+        ('On', 'On'),
+        ('Off', 'Off'),
+    ) //seccion en models para las opciones de encendido y apagado de la AC
+
+
+    revisar el archivo 0003_dataac, forms.
+    
