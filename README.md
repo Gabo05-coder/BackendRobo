@@ -71,4 +71,4 @@ status: Es un campo de texto que almacena el estado del dispositivo. Puede tener
  la clase forms.Form. Esta clase representa un formulario en Django
  opciones: Es un campo de selección que permite al usuario elegir entre dos opciones: 'Auto' o 'Manual'.
  representa un formulario que se puede utilizar para recopilar información del usuario en una aplicación web Django. Cada instancia de esta clase representa un formulario con un campo de selección llamado opciones.
-revisar el archivo 0003_dataac, forms.
+revisar el archivo 0003_dataac, forms. __
