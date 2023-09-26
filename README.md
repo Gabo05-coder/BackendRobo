@@ -56,6 +56,7 @@ clonado
 25/9/23
 carpeta de migracion
       es la convercion de los codgios a lenguaje sql en migracion de forma alter table siver para que el sistema funciones en diferentes computadores, como una forma automaticamente los archivos para evitar errores.
+
   creacion de un nueva funcion para mostrar la opciones creadas dentro de los modelos creando un formulario de datos Forms.py
     class DataViewSet(viewsets.ModelViewSet):
     queryset = dataAC.objects.all()
@@ -70,5 +71,22 @@ carpeta de migracion
         ('Off', 'Off'),
     ) //seccion en models para las opciones de encendido y apagado de la AC
 
+segun el archivo de models
+el codigo que contiene 
+MODE_CHOICES: Es una tupla que define las opciones para el campo mode. 
 
-    revisar el archivo 0003_dataac, forms.
+El campo mode es una cadena de texto que puede tener los valores 'Auto' o 'Manual'.
+
+STATUS_CHOICES: Es una tupla que define las opciones para el campo status. 
+El campo status es una cadena de texto que puede tener los valores 'On' o 'Off'.
+
+name, mark, model, location, conectionCode: Estos son campos de texto que almacenan información relacionada con el nombre, marca, modelo, ubicación y código de conexión respectivamente.
+
+mode: Es un campo de texto que almacena el modo de funcionamiento del dispositivo. Puede tener los valores 'Auto' o 'Manual' según la elección del usuario.
+status: Es un campo de texto que almacena el estado del dispositivo. Puede tener los valores 'On' o 'Off' según la elección del usuario.
+ Cada instancia de esta clase representa un registro en la base de datos
+
+
+ con respecto a form, segun tengo entendido no siver para nada pero, la clase llamada acForms que hereda de la clase forms.Form. Esta clase representa un formulario en Django.
+ opciones: Es un campo de selección que permite al usuario elegir entre dos opciones: 'Auto' o 'Manual'.
+ representa un formulario que se puede utilizar para recopilar información del usuario en una aplicación web
