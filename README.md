@@ -48,27 +48,27 @@ DB_PORT: Almacena el número de puerto al que se debe conectar la aplicación pa
 
 MYSQL_ATTR_SSL_CA: Esta variable almacena la ubicación del archivo de certificado SSL que se utilizará para establecer una conexión segura a la base de datos. El valor es "/etc/ssl/certs/ca-certificates.crt", lo que indica la ubicación del archivo de certificado en el sistema.
 
+clonado python manage.py runserver ttp://127.0.0.1:8000/api/dataAC
 
-clonado 
-  python manage.py runserver
-  ttp://127.0.0.1:8000/api/dataAC
+25/9/23 carpeta de migracion es la convercion de los codgios a lenguaje sql en migracion de forma alter table siver para que el sistema funciones en diferentes computadores, como una forma automaticamente los archivos para evitar errores. creacion de un nueva funcion para mostrar la opciones creadas dentro de los modelos creando un formulario de datos Forms.py class DataViewSet(viewsets.ModelViewSet): queryset = dataAC.objects.all() serializer_class = DataSerializer cracion de una clase para vista de los datos en DataAC MODE_CHOICES = ( ('Auto', 'Auto'), ('Manual', 'Manual'), )
 
-25/9/23
-carpeta de migracion
-      es la convercion de los codgios a lenguaje sql en migracion de forma alter table siver para que el sistema funciones en diferentes computadores, como una forma automaticamente los archivos para evitar errores.
-  creacion de un nueva funcion para mostrar la opciones creadas dentro de los modelos creando un formulario de datos Forms.py
-    class DataViewSet(viewsets.ModelViewSet):
-    queryset = dataAC.objects.all()
-    serializer_class = DataSerializer  cracion de una clase para vista de los datos en DataAC
-      MODE_CHOICES = (
-        ('Auto', 'Auto'),
-        ('Manual', 'Manual'),
-    )
+STATUS_CHOICES = (
+    ('On', 'On'),
+    ('Off', 'Off'),
+) //seccion en models para las opciones de encendido y apagado de la AC
 
-    STATUS_CHOICES = (
-        ('On', 'On'),
-        ('Off', 'Off'),
-    ) //seccion en models para las opciones de encendido y apagado de la AC
+ la clase models.Model. Esta clase representa un modelo de datos en Django
+ MODE_CHOICES: Es una tupla que define las opciones para el campo mode. El campo mode es una cadena de texto que puede tener los valores 'Auto' o 'Manual'.
 
+STATUS_CHOICES: Es una tupla que define las opciones para el campo status. El campo status es una cadena de texto que puede tener los valores 'On' o 'Off'.
 
-    revisar el archivo 0003_dataac, forms.
+name, mark, model, location, conectionCode: Estos son campos de texto que almacenan información relacionada con el nombre, marca, modelo, ubicación y código de conexión respectivamente.
+
+mode: Es un campo de texto que almacena el modo de funcionamiento del dispositivo. Puede tener los valores 'Auto' o 'Manual' según la elección del usuario.
+status: Es un campo de texto que almacena el estado del dispositivo. Puede tener los valores 'On' o 'Off' según la elección del usuario.
+ representa un modelo de datos que se puede utilizar para almacenar y manipular información relacionada con dispositivos de aire acondicionado en una base de datos utilizando Django.
+
+ la clase forms.Form. Esta clase representa un formulario en Django
+ opciones: Es un campo de selección que permite al usuario elegir entre dos opciones: 'Auto' o 'Manual'.
+ representa un formulario que se puede utilizar para recopilar información del usuario en una aplicación web Django. Cada instancia de esta clase representa un formulario con un campo de selección llamado opciones.
+revisar el archivo 0003_dataac, forms. __
